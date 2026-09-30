@@ -94,8 +94,18 @@ node tools/smoke.mjs               # 自检
 
 ## 发布到手机上
 
-- **微信里打开**：必须用 https 链接，`file://` 在微信 webview 里不执行 JavaScript。走 GitHub Pages：仓库根目录放 `index.html`（`audio/` 一起推上去），Settings → Pages 选 `main` / `/ (root)`。注意 GitHub 免费账号的 Pages 只对 **public** 仓库开放。
-- **豆包 app / 直接传文件**：用 `识字游戏-单文件版.html`，一个文件带走全部语音，不依赖同级目录。
+已发布在 GitHub Pages（仓库 `617lou/shizi`，推送到 `main` 后自动重新部署）：
+
+| 用途 | 地址 |
+|---|---|
+| 手机/微信里直接玩 | https://617lou.github.io/shizi/ |
+| **下载单文件版**（推荐给豆包 app） | https://617lou.github.io/shizi/识字游戏-单文件版.html |
+| 语音试听页 | https://617lou.github.io/shizi/tools/listen.html |
+
+- **微信里打开**：必须用 https 链接，`file://` 在微信 webview 里不执行 JavaScript。
+- **豆包 app**：手机上打开上面「下载单文件版」那个地址，把文件存下来再丢给豆包打开——单文件自带全部语音，不依赖同级目录。
+- **更新**：`git push` 到 `main` 后 GitHub Pages 会自动重新部署，约 1 分钟生效。
+- GitHub 免费账号的 Pages 只对 **public** 仓库开放。
 
 ## 已验证 / 未验证
 
@@ -105,6 +115,7 @@ node tools/smoke.mjs               # 自检
 - 跑完整关卡：题目播 `zi/`、答对播 `ph/right-`、过关播 `ui/done`，**TTS 调用为 0**（确实在用语音文件，没偷偷回退）；
 - 54 个音频文件全部可解码（单字总长 1.5~1.8s、其中真正发音 0.19~0.79s；短语总长 2.4~2.6s、发音 ≤1.69s；界面总长 1.5~4.0s、发音 ≤3.1s），并且按每段的**实际发音结束点**核对了段落切换，**没有一段被下一句切掉**，切换余量最小 896ms；
 - 缺语音文件时自动回退系统 TTS，流程照常推进、不报错；
-- 单文件版内联语音可用（数据 URI 正常解码播放）。
+- 单文件版内联语音可用（数据 URI 正常解码播放）；
+- **线上地址端到端跑过**：页面加载并执行 JS、连播 6 段音频（readyState=4）、TTS 调用 0 次、网络实际取到 11 个 mp3、零报错。
 
 没验证的：**发音本身对不对**（我听不了音频）。请打开 `tools/listen.html` 逐个点一遍，或直接在手机上玩一关——尤其确认「一」有没有被读成 yí/yì、「手/水/小/口」的三声是否完整。
