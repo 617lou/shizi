@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>语音试听 · 快乐认字</title>
+<style>
+ body{margin:0;padding:20px;font-family:"PingFang SC","Microsoft YaHei",sans-serif;color:#43302b;
+   background:linear-gradient(180deg,#bfe8ff,#e6f6ff 45%,#fff7e3);min-height:100vh}
+ h1{font-size:22px;margin:0 0 4px}
+ p.note{margin:0 0 18px;color:#5f7f96;font-size:13px}
+ h2{font-size:16px;margin:22px 0 8px;color:#5f7f96}
+ table{border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;
+   box-shadow:0 6px 18px rgba(90,120,150,.16)}
+ td{padding:6px 12px;border-bottom:1px solid #eef3f7}
+ td.ch{font-size:34px;font-weight:800;line-height:1}
+ button{font:inherit;font-size:13px;padding:7px 12px;margin:2px;border:0;border-radius:9px;
+   background:#4aa8ff;color:#fff;font-weight:700;cursor:pointer}
+ button:active{background:#2f83d6}
+ ul{list-style:none;padding:0;margin:0}
+ li{margin:3px 0}
+ code{background:#fff;border-radius:5px;padding:1px 5px;font-size:12px}
+</style></head><body>
+<h1>语音试听</h1>
+<p class="note">点每个按钮听一遍，确认发音对吗。当前音色：<code>zh-CN-YunxiaNeural</code>；
+ 全部重新生成：<code>python tools/gen-audio.py --force</code></p>
+<h2>20 个单字</h2>
+<table><tr><td class="ch">一</td><td><button data-src="../audio/zi/yi.mp3">yi</button> <button data-src="../audio/ph/right-yi.mp3">对啦，这是一</button></td></tr>
+<tr><td class="ch">二</td><td><button data-src="../audio/zi/er.mp3">er</button> <button data-src="../audio/ph/right-er.mp3">对啦，这是二</button></td></tr>
+<tr><td class="ch">三</td><td><button data-src="../audio/zi/san.mp3">san</button> <button data-src="../audio/ph/right-san.mp3">对啦，这是三</button></td></tr>
+<tr><td class="ch">人</td><td><button data-src="../audio/zi/ren.mp3">ren</button> <button data-src="../audio/ph/right-ren.mp3">对啦，这是人</button></td></tr>
+<tr><td class="ch">口</td><td><button data-src="../audio/zi/kou.mp3">kou</button> <button data-src="../audio/ph/right-kou.mp3">对啦，这是口</button></td></tr>
+<tr><td class="ch">手</td><td><button data-src="../audio/zi/shou.mp3">shou</button> <button data-src="../audio/ph/right-shou.mp3">对啦，这是手</button></td></tr>
+<tr><td class="ch">大</td><td><button data-src="../audio/zi/da.mp3">da</button> <button data-src="../audio/ph/right-da.mp3">对啦，这是大</button></td></tr>
+<tr><td class="ch">小</td><td><button data-src="../audio/zi/xiao.mp3">xiao</button> <button data-src="../audio/ph/right-xiao.mp3">对啦，这是小</button></td></tr>
+<tr><td class="ch">上</td><td><button data-src="../audio/zi/shang.mp3">shang</button> <button data-src="../audio/ph/right-shang.mp3">对啦，这是上</button></td></tr>
+<tr><td class="ch">下</td><td><button data-src="../audio/zi/xia.mp3">xia</button> <button data-src="../audio/ph/right-xia.mp3">对啦，这是下</button></td></tr>
+<tr><td class="ch">日</td><td><button data-src="../audio/zi/ri.mp3">ri</button> <button data-src="../audio/ph/right-ri.mp3">对啦，这是日</button></td></tr>
+<tr><td class="ch">月</td><td><button data-src="../audio/zi/yue.mp3">yue</button> <button data-src="../audio/ph/right-yue.mp3">对啦，这是月</button></td></tr>
+<tr><td class="ch">水</td><td><button data-src="../audio/zi/shui.mp3">shui</button> <button data-src="../audio/ph/right-shui.mp3">对啦，这是水</button></td></tr>
+<tr><td class="ch">火</td><td><button data-src="../audio/zi/huo.mp3">huo</button> <button data-src="../audio/ph/right-huo.mp3">对啦，这是火</button></td></tr>
+<tr><td class="ch">山</td><td><button data-src="../audio/zi/shan.mp3">shan</button> <button data-src="../audio/ph/right-shan.mp3">对啦，这是山</button></td></tr>
+<tr><td class="ch">木</td><td><button data-src="../audio/zi/mu.mp3">mu</button> <button data-src="../audio/ph/right-mu.mp3">对啦，这是木</button></td></tr>
+<tr><td class="ch">田</td><td><button data-src="../audio/zi/tian.mp3">tian</button> <button data-src="../audio/ph/right-tian.mp3">对啦，这是田</button></td></tr>
+<tr><td class="ch">牛</td><td><button data-src="../audio/zi/niu.mp3">niu</button> <button data-src="../audio/ph/right-niu.mp3">对啦，这是牛</button></td></tr>
+<tr><td class="ch">羊</td><td><button data-src="../audio/zi/yang.mp3">yang</button> <button data-src="../audio/ph/right-yang.mp3">对啦，这是羊</button></td></tr>
+<tr><td class="ch">鱼</td><td><button data-src="../audio/zi/yu.mp3">yu</button> <button data-src="../audio/ph/right-yu.mp3">对啦，这是鱼</button></td></tr></table>
+<h2>界面短语</h2>
+<ul><li><button data-src="../audio/ui/lv1.mp3">第一关</button></li>
+<li><button data-src="../audio/ui/lv2.mp3">第二关</button></li>
+<li><button data-src="../audio/ui/lv3.mp3">第三关</button></li>
+<li><button data-src="../audio/ui/lv4.mp3">第四关</button></li>
+<li><button data-src="../audio/ui/try.mp3">再试一次吧</button></li>
+<li><button data-src="../audio/ui/done.mp3">真棒！</button></li>
+<li><button data-src="../audio/ui/alldone.mp3">全部学完啦！你是认字小达人！</button></li>
+<li><button data-src="../audio/ui/soundon.mp3">声音打开了</button></li></ul>
+<h2>音色对比（同一个「人」和「山」，换成喜欢的音色后重跑生成脚本）</h2>
+<ul><li><button data-src="../audio/_voices/Xiaoxiao-shou.mp3">Xiaoxiao-shou</button></li>
+<li><button data-src="../audio/_voices/Xiaoxiao-shui.mp3">Xiaoxiao-shui</button></li>
+<li><button data-src="../audio/_voices/Xiaoyi-shou.mp3">Xiaoyi-shou</button></li>
+<li><button data-src="../audio/_voices/Xiaoyi-shui.mp3">Xiaoyi-shui</button></li>
+<li><button data-src="../audio/_voices/Yunxia-shou.mp3">Yunxia-shou</button></li>
+<li><button data-src="../audio/_voices/Yunxia-shui.mp3">Yunxia-shui</button></li></ul>
+<script>
+var cur=null;
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b) return;
+  if(cur){cur.pause();}
+  cur=new Audio(b.getAttribute('data-src'));
+  cur.play();
+  b.style.background='#38c172';
+  setTimeout(function(){b.style.background='';},400);
+});
+</script>
+</body></html>
